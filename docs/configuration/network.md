@@ -72,7 +72,7 @@ iface eth0 inet static
     pre-up ifconfig eth0 hw ether 00:11:22:9f:51:27
 ```
 
-修改完成后，命令行输入`sudo restart_network`命令让配置生效。
+修改完成后，`reboot`重启让配置生效。
 
 ## 无线网络
 
@@ -222,7 +222,7 @@ Station模式下，开发板作为客户端，接入路由器无线热点进行�
 7. 如需切换回`Station`模式，可按如下方式进行：
     ```bash
     # 停止 hostapd
-    killall5 -9 hostapd
+    killall -9 hostapd
     
     # 清除 wlan0 的地址
     ip addr flush dev wlan0
